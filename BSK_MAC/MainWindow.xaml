@@ -1,0 +1,101 @@
+﻿<Window x:Class="BSK_MAC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BSK_MAC"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.ColumnSpan="2">
+                <TabControl SelectionChanged="TabControl_SelectionChanged">
+                    <TabItem Name="TabUsr" RenderTransformOrigin="7.836,2.1">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Usr." Foreground="Blue" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <DataGrid Name="UsrDataGrid" Margin="10,38,118,10">
+                            <DataGrid.ItemContainerStyle>
+                                <Style TargetType="DataGridRow">
+                                    <EventSetter Event="MouseDown" Handler="Row_MouseDown"/>
+                                </Style>
+                            </DataGrid.ItemContainerStyle>
+                        </DataGrid>
+                    </TabItem>
+                    <TabItem Name="TabSam">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Sam." Foreground="Blue" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <DataGrid  Name="SamDataGrid" Margin="10,38,118,10"></DataGrid>
+                    </TabItem>
+
+                    <TabItem Name="TabMod">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Mod." Foreground="Blue" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <DataGrid Name="ModDataGrid" Margin="10,38,118,10"></DataGrid>
+                    </TabItem>
+
+                    <TabItem Name="TabPro">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Pro." Foreground="Blue" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <DataGrid   Name="ProDataGrid" Margin="10,38,118,10"></DataGrid>
+                    </TabItem>
+
+                    <TabItem Name="TabUmo">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Umo." Foreground="Blue" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <DataGrid   Name="UmoDataGrid" Margin="10,38,118,10"></DataGrid>
+                    </TabItem>
+
+                    <TabItem Name="TabDea">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Dea." Foreground="Blue" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <DataGrid   Name="DeaDataGrid" Margin="10,38,118,10"></DataGrid>
+                    </TabItem>
+
+                    <TabItem Name="TabMia">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Mia." Foreground="Blue" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <DataGrid   Name="MiaDataGrid" Margin="10,38,118,10"></DataGrid>
+                    </TabItem>
+
+                    <TabItem Name="TabGar">
+                        <TabItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Gar." Foreground="Blue" />
+                            </StackPanel>
+                        </TabItem.Header>
+                        <DataGrid   Name="GarDataGrid" Margin="10,38,118,10"></DataGrid>
+                    </TabItem>
+
+
+                </TabControl>
+            </Grid>
+            <Label Name="UsrLabel" Content="Jeszcze nie wybrano użytkownika." Margin="87,22,162.6,370" Grid.ColumnSpan="2"/>
+            <Button Name="SaveButton" Click="SaveButtonClick" Content="Save" Margin="679,50,9.6,303" Grid.ColumnSpan="2"></Button>
+        </Grid>
+    </Grid>
+</Window>
